@@ -1,0 +1,8 @@
+if [ -f "zmd" ]; then
+	sudo rm zmd;
+fi
+go build .;
+if [ -f "/usr/local/bin/zmd" ]; then
+	sudo rm /usr/local/bin/zmd;
+fi
+sudo mv zmd /usr/local/bin/;
